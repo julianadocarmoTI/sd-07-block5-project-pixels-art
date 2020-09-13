@@ -42,7 +42,10 @@ table {
 }
 
 .pixel {
+  background-color: white;
   border: 1px solid black;
   height: 40px;
+  margin: 0;
+  padding: 0;
   width: 40px;
 }
