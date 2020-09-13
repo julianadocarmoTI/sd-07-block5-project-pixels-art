@@ -1,0 +1,37 @@
+html , body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.color {
+    border: 1px solid black;
+    cursor: pointer;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: rgb(223 , 41 , 53);
+}
+
+.blue {
+    background-color: rgb(15 , 163 , 177);
+}
+
+.yellow {
+    background-color: rgb(255 , 174 , 3);
+}
