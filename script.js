@@ -6,11 +6,11 @@ const data = {
     'rgb(15, 163, 177)',
   ],
   selectedColor: 0,
-}
+};
 
 function changeSelectedColor(selectedColor) {
   data.selectedColor = parseInt(selectedColor.id);
-  document.querySelectorAll('.color').forEach(color => {
+  document.querySelectorAll('.color').forEach((color) => {
     if (color === selectedColor) {
       color.classList.add('selected');
     } else if (color.classList.contains('selected')) {
@@ -24,21 +24,21 @@ function changePixelColor(selectedPixel) {
 }
 
 function clearBoard() {
-  document.querySelectorAll('.pixel').forEach(pixel => {
+  document.querySelectorAll('.pixel').forEach((pixel) => {
     pixel.style.backgroundColor = 'white';
-  })
+  });
 }
 
 function initializeFunctions() {
   document.querySelector('#clear-board').addEventListener('click', clearBoard);
-  document.querySelectorAll('.color').forEach(color => {
+  document.querySelectorAll('.color').forEach((color) => {
     color.addEventListener('click', () => changeSelectedColor(color));
   });
-  document.querySelectorAll('.pixel').forEach(pixel => {
+  document.querySelectorAll('.pixel').forEach((pixel) => {
     pixel.addEventListener('click', () => changePixelColor(pixel));
   });
 }
 
 document.body.onload = function () {
-    initializeFunctions();
+  initializeFunctions();
 };
