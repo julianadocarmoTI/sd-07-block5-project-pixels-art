@@ -29,13 +29,14 @@ body {
   background-color: rgb(223, 41, 53);
 }
 
+.yellow {
+  background-color: rgb(255, 174, 3);
+}
+
 .blue {
   background-color: rgb(15, 163, 177);
 }
 
-.yellow {
-  background-color: rgb(255, 174, 3);
-}
 
 table {
   border-collapse: collapse;
@@ -43,6 +44,7 @@ table {
 
 .pixel {
   background-color: white;
+  cursor: pointer;
   border: 1px solid black;
   height: 40px;
   margin: 0;
