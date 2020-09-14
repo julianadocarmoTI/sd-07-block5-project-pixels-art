@@ -1,10 +1,5 @@
 const data = {
-  colors: [
-    'black',
-    'rgb(223, 41, 53)',
-    'rgb(255, 174, 3)',
-    'rgb(15, 163, 177)',
-  ],
+  colors: ['black'],
   selectedColor: 0,
 };
 
@@ -29,7 +24,23 @@ function clearBoard() {
   });
 }
 
+function createRandomColor() {
+  const number = () => Math.floor(Math.random() * 256);
+  return `rgb(${number()}, ${number()}, ${number()})`;
+}
+
+function initializeColors() {
+  for (let index = 1; index <= 3; index += 1) {
+    data.colors.push(createRandomColor());
+  }
+  const colors = document.querySelectorAll('.color');
+  for (let index = 0; index < data.colors.length; index += 1) {
+    colors[index].style.backgroundColor = data.colors[index];
+  }
+}
+
 function initializeFunctions() {
+  initializeColors();
   document.querySelector('#clear-board').addEventListener('click', clearBoard);
   document.querySelectorAll('.color').forEach((color) => {
     color.addEventListener('click', () => changeSelectedColor(color));
