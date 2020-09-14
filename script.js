@@ -23,13 +23,20 @@ function changePixelColor(selectedPixel) {
   selectedPixel.style.backgroundColor = data.colors[data.selectedColor];
 }
 
+function clearBoard() {
+  document.querySelectorAll('.pixel').forEach(pixel => {
+    pixel.style.backgroundColor = 'white';
+  })
+}
+
 function initializeFunctions() {
-    document.querySelectorAll('.color').forEach(color => {
-      color.addEventListener('click', () => changeSelectedColor(color));
-    });
-    document.querySelectorAll('.pixel').forEach(pixel => {
-      pixel.addEventListener('click', () => changePixelColor(pixel));
-    });
+  document.querySelector('#clear-board').addEventListener('click', clearBoard);
+  document.querySelectorAll('.color').forEach(color => {
+    color.addEventListener('click', () => changeSelectedColor(color));
+  });
+  document.querySelectorAll('.pixel').forEach(pixel => {
+    pixel.addEventListener('click', () => changePixelColor(pixel));
+  });
 }
 
 document.body.onload = function () {
